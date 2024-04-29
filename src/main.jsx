@@ -7,6 +7,7 @@ import {
 import Applied from './Component/Applied/Applied';
 import Blog from './Component/Blog/Blog';
 import Home from './Component/Home/Home';
+import JobAllDetails from './Component/JobAllDeatils/JobAllDetails';
 import Jobs from './Component/Jobs/Jobs';
 import Root from './Component/Root/Root';
 import Stayics from './Component/Statics/Stayics';
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
       {
         path:'/statisc',
         element:<Stayics></Stayics>
+      },
+      {
+        path:'/jobs/:id',
+        element:<JobAllDetails></JobAllDetails>,
+        loader:()=>fetch('../jobs.json')
+
       }
 
     ]

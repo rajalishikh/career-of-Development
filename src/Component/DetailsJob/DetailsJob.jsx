@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { CiLocationOn } from "react-icons/ci";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const DetailsJob = ({JOb}) => {
-    const {logo,job_title,company_name,}=JOb;
+    const {logo,job_title,company_name,id}=JOb;
     return (
         <div>
            <div className="card max-w-96 bg-base-100 shadow-xl">
@@ -39,7 +40,9 @@ const DetailsJob = ({JOb}) => {
 
    
     <div className="card-actions">
-      <button className="btn btn-primary">Show Details </button>
+     <Link to={`/jobs/${id}`}>
+     <button className="btn btn-primary">Show Details </button>
+     </Link>
     </div>
   </div>
 </div>
